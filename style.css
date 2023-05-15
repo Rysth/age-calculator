@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+	--CL-primary-red: #ff4b4b;
+	--CL-primary-green: #1fb811;
+	--CL-primary-gray: #808080;
+	--CL-primary-blue-accented: #4b57ff;
+
+	--CL-neutral-white: #ffffff;
+	--CL-neutral-black: #000000;
+	--CL-neutral-transparent-black: #00000062;
+
+	--FF-primary-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--CL-neutral-white);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--CL-neutral-black);
+	border-radius: 10px;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: var(--FF-primary-poppins);
+	padding: 1em 0;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button {
+	width: 100%;
+	font-family: var(--FF-primary-poppins);
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Calculator */
+.calculator {
+	width: min(95%, 60rem);
+	box-shadow: 0 0 5px var(--CL-neutral-transparent-black);
+	border-radius: 2em;
+	padding: 2em;
+	text-align: center;
+}
+
+.calculator__header {
+	padding: 1em 0;
+}
+
+.calculator__title {
+	font-size: 3.5rem;
+}
+
+.calculator__form {
+	display: grid;
+	gap: 1.5em;
+	margin: 1em 0 2.5em 0;
+	padding: 1em;
+}
+
+.calculator__label {
+	font-size: 1.6rem;
+}
+
+.calculator__input,
+.calculator__button {
+	font-size: 1.6rem;
+	padding: 0.5em 1em;
+	border-radius: 2em;
+	border: none;
+	box-shadow: 0 0 5px var(--CL-neutral-transparent-black);
+	cursor: pointer;
+}
+
+.calculator__button {
+	background-color: var(--CL-primary-blue-accented);
+	color: var(--CL-neutral-white);
+	text-transform: uppercase;
+	transition: background-color 0.2s ease-out;
+}
+
+.calculator__result {
+	font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+	.calculator__button:hover {
+		background-color: var(--CL-neutral-black);
+	}
+}
